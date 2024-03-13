@@ -1,0 +1,41 @@
+{
+    "files.associations": {
+        "*.txt": "cmake",
+        "xstring": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "utility": "cpp",
+        "unordered_map": "cpp",
+        "iosfwd": "cpp",
+        "initializer_list": "cpp",
+        "algorithm": "cpp",
+        "vector": "cpp"
+    },
+    "runTerminalCommand.commands": [
+
+        {
+            "command": "cmake  -G \"Visual Studio 17 2022\" -A \"x64\" .. ",
+            "name": "Generate"
+        },
+        {
+            "command": "cmake --build .",
+            "name": "build"
+        },
+        {
+            "command": "mkdir build && cd build",
+            "name": "cd build"
+        },
+        {
+            "command": "./H3_Astar_V2.exe",
+            "name": "exe"
+        },
+    ],
+    "dotnet.defaultSolution": "disable",
+    "auto-run-command.rules": [
+        {
+            "condition": "always",
+            "command": "auto-run-command.placeholder-command",
+            "message": "Running a dummy command"
+        }
+    ]
+}

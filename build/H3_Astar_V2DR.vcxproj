@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5EAC1A40-1DAF-35AC-BBD2-3CDB60609A70}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>H3_Astar_V2DR</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\H3_Astar_V2DR\x64\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H3_Astar_V2DR.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H3_Astar_V2DR</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\H3_Astar_V2DR\x64\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H3_Astar_V2DR.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H3_Astar_V2DR</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);_DEBUG;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>h3.lib;python311.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/H3_Astar_V2DR/Python311/libs;C:/H3_Astar_V2DR/Python311/libs/$(Configuration);C:/H3_Astar_V2DR;C:/H3_Astar_V2DR/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/H3_Astar_V2DR/x64/Debug/H3_Astar_V2DR.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/H3_Astar_V2DR/x64/Debug/H3_Astar_V2DR.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SDLCheck>true</SDLCheck>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);NDEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;NDEBUG;_CONSOLE;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\H3_Astar_V2DR\Python311\include;C:\H3_Astar_V2DR\Python311\libs;C:\H3_Astar_V2DR;C:\H3_Astar_V2DR\include;C:\H3_Astar_V2DR\include\pareto;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>h3.lib;python311_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/H3_Astar_V2DR/Python311/libs;C:/H3_Astar_V2DR/Python311/libs/$(Configuration);C:/H3_Astar_V2DR;C:/H3_Astar_V2DR/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/H3_Astar_V2DR/x64/Release/H3_Astar_V2DR.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>C:/H3_Astar_V2DR/x64/Release/H3_Astar_V2DR.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\H3_Astar_V2DR\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/H3_Astar_V2DR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\software\cmake\bin\cmake.exe -SC:/H3_Astar_V2DR -BC:/H3_Astar_V2DR/build --check-stamp-file C:/H3_Astar_V2DR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\H3_Astar_V2DR\CMake\Default.cmake;C:\H3_Astar_V2DR\CMake\DefaultCXX.cmake;C:\H3_Astar_V2DR\CMake\Utils.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeCXXCompiler.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeRCCompiler.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeSystem.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\H3_Astar_V2DR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/H3_Astar_V2DR/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\software\cmake\bin\cmake.exe -SC:/H3_Astar_V2DR -BC:/H3_Astar_V2DR/build --check-stamp-file C:/H3_Astar_V2DR/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\H3_Astar_V2DR\CMake\Default.cmake;C:\H3_Astar_V2DR\CMake\DefaultCXX.cmake;C:\H3_Astar_V2DR\CMake\Utils.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeCXXCompiler.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeRCCompiler.cmake;C:\H3_Astar_V2DR\build\CMakeFiles\3.27.7\CMakeSystem.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\software\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\software\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\software\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\H3_Astar_V2DR\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\H3_Astar_V2DR\Astar.cpp" />
+    <ClCompile Include="C:\H3_Astar_V2DR\Multi_Astar.cpp" />
+    <ClCompile Include="C:\H3_Astar_V2DR\Start.cpp" />
+    <ClCompile Include="C:\H3_Astar_V2DR\Util.cpp" />
+    <ClCompile Include="C:\H3_Astar_V2DR\Vinoroi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\H3_Astar_V2DR\build\ZERO_CHECK.vcxproj">
+      <Project>{255B5F9F-9B6B-33D0-9E9F-8F5B552AF73B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
